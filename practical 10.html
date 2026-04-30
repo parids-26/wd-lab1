@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Embedding Demo</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; }
+        header { background: #333; color: white; padding: 1rem; text-align: center; }
+        .container { display: flex; flex: 1; }
+        
+        /* Navigation Sidebar */
+        nav { width: 200px; background: #f4f4f4; padding: 1rem; border-right: 1px solid #ccc; }
+        nav a { display: block; margin-bottom: 10px; color: #007bff; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        /* Main Content Area */
+        main { flex: 1; padding: 10px; }
+        iframe { width: 100%; height: 100%; border: 2px solid #ddd; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Content Explorer</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <h3>Quick Links</h3>
+            <a href="https://www.wikipedia.org" target="displayWindow">Wikipedia (External)</a>
+            <a href="https://www.openstreetmap.org/export/embed.html?bbox=-0.15%2C51.50%2C-0.10%2C51.52&layer=mapnik" target="displayWindow">View Map (London)</a>
+            <a href="https://example.com" target="displayWindow">Example Domain</a>
+        </nav>
+
+        <main>
+            <iframe name="displayWindow" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.15%2C51.50%2C-0.10%2C51.52&layer=mapnik" title="Content Display">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+        </main>
+    </div>
+
+</body>
+</html>
